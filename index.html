@@ -20,37 +20,156 @@
   <body>
     <!-- =============== HEADER =============== -->
     <header class="header">
-      <div class="container header-conteiner display-flex">
-        <nav class="display-flex header-nav-menu">
-          <a class="logo-dark logo link" href="./index.html">
-            <span class="part-logo-web">Web</span>Studio
-          </a>
-          <ul class="display-flex header-nav-menu-list">
-            <li class="list menu-item">
-              <a class="link menu-link current" href="./index.html">Studio</a>
-            </li>
-            <li class="list menu-item">
-              <a class="link menu-link" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li class="list menu-item">
-              <a class="link menu-link" href="">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="address">
-          <ul class="display-flex">
-            <li class="list address-item">
-              <a class="link address-link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="list address-item">
-              <a class="link address-link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+      <div class="container">
+        <div class="header-conteiner display-flex">
+          <nav class="display-flex header-nav-menu">
+            <a class="logo-dark logo link" href="./index.html">
+              <span class="part-logo-web">Web</span>Studio
+            </a>
+            <ul class="header-nav-menu-list">
+              <li class="list menu-item">
+                <a class="link menu-link current" href="./index.html">Studio</a>
+              </li>
+              <li class="list menu-item">
+                <a class="link menu-link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="list menu-item">
+                <a class="link menu-link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="button" class="hamburger-button js-open-menu">
+            <svg class="hamburger-icon" width="32px" height="22px">
+              <use href="./images/sprite.svg#menu-hamburger"></use>
+            </svg>
+          </button>
+          <address class="address">
+            <ul class="display-flex address-list">
+              <li class="list address-item">
+                <a class="link address-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="list address-item">
+                <a class="link address-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="mobile-menu-backdrop js-menu-container"></div>
+          <div class="mobile-menu">
+            <button
+              type="button"
+              class="close-button menu-close-button js-close-menu"
+            >
+              <svg class="close-button-icon" width="8px" height="8px">
+                <use href="./images/sprite.svg#close-button"></use>
+              </svg>
+            </button>
+            <nav class="display-flex mobile-header-nav-menu">
+              <ul class="mobile-header-nav-menu-list">
+                <li class="list mobile-menu-item">
+                  <a
+                    class="link mobile-menu-link mobile-menu-font"
+                    href="./index.html"
+                    >Studio</a
+                  >
+                </li>
+                <li class="list mobile-menu-item">
+                  <a
+                    class="link mobile-menu-link mobile-menu-font"
+                    href="./portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="list mobile-menu-item">
+                  <a class="link mobile-menu-link mobile-menu-font" href=""
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <address class="mobile-menu-address">
+              <ul class="display-flex mobile-menu-address-list">
+                <li class="list mobile-menu-item">
+                  <a
+                    class="link mobile-menu-address-link mobile-menu-font"
+                    href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="list mobile-menu-address-item">
+                  <a
+                    class="link mobile-menu-address-link mobile-menu-font mobile-menu-email"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="list mobile-menu-address-item">
+                  <ul class="mobile-menu-social-list icon-list list">
+                    <li class="mobile-menu-social-list-item">
+                      <a
+                        href=""
+                        class="mobile-menu-social-list-link icon-background"
+                      >
+                        <svg class="mobile-menu-social-list-icon">
+                          <use
+                            href="./images/sprite.svg#icon-instagram"
+                            width="24px"
+                            height="24px"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="mobile-menu-social-list-item">
+                      <a
+                        href=""
+                        class="mobile-menu-social-list-link icon-background"
+                      >
+                        <svg class="mobile-menu-social-list-icon">
+                          <use
+                            href="./images/sprite.svg#icon-twitter"
+                            width="24px"
+                            height="24px"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="mobile-menu-social-list-item">
+                      <a
+                        href=""
+                        class="mobile-menu-social-list-link icon-background"
+                      >
+                        <svg class="mobile-menu-social-list-icon">
+                          <use
+                            href="./images/sprite.svg#icon-facebook"
+                            width="24px"
+                            height="24px"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="mobile-menu-social-list-item">
+                      <a
+                        href=""
+                        class="mobile-menu-social-list-link icon-background"
+                      >
+                        <svg class="mobile-menu-social-list-icon">
+                          <use
+                            href="./images/sprite.svg#icon-linkedin"
+                            width="24px"
+                            height="24px"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
       </div>
     </header>
     <!-- =============== /HEADER =============== -->
@@ -80,7 +199,7 @@
                 </svg>
               </div>
               <h3 class="small-title">Strategy</h3>
-              <p class="paragraph">
+              <p class="our-qua-list-paragraph">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
@@ -92,7 +211,7 @@
                 </svg>
               </div>
               <h3 class="small-title">Punctuality</h3>
-              <p class="paragraph">
+              <p class="our-qua-list-paragraph">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
@@ -104,7 +223,7 @@
                 </svg>
               </div>
               <h3 class="small-title">Diligence</h3>
-              <p class="paragraph">
+              <p class="our-qua-list-paragraph">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
@@ -116,7 +235,7 @@
                 </svg>
               </div>
               <h3 class="small-title">Technologies</h3>
-              <p class="paragraph">
+              <p class="our-qua-list-paragraph">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -127,7 +246,7 @@
       <!-- =============== /OUR QUALITIES =============== -->
 
       <!-- =============== WHAT ARE WE DOING =============== -->
-      <section class="we-doing section">
+      <section class="we-doing-section section">
         <div class="container">
           <h2 class="medium-title">What are we doing</h2>
           <ul class="flex-card-list">
@@ -172,8 +291,8 @@
                 alt="Mark Guerrero"
                 width="264"
               />
-              <div class="team-list-card-title card-title">
-                <h3 class="team-list-item-title small-title">Mark Guerrero</h3>
+              <div class="team-list-card-title card-title-wrapper">
+                <h3 class="team-list-item-title card-title">Mark Guerrero</h3>
                 <p class="team-list-item-subtitle paragraph">
                   Product Designer
                 </p>
@@ -245,8 +364,8 @@
                 alt="Tom Ford"
                 width="264"
               />
-              <div class="team-list-card-title card-title">
-                <h3 class="team-list-item-title small-title">Tom Ford</h3>
+              <div class="team-list-card-title card-title-wrapper">
+                <h3 class="team-list-item-title card-title">Tom Ford</h3>
                 <p class="team-list-item-subtitle paragraph">
                   Frontend Developer
                 </p>
@@ -317,8 +436,8 @@
                 alt="Camila Garcia"
                 width="264"
               />
-              <div class="team-list-card-title card-title">
-                <h3 class="team-list-item-title small-title">Camila Garcia</h3>
+              <div class="team-list-card-title card-title-wrapper">
+                <h3 class="team-list-item-title card-title">Camila Garcia</h3>
                 <p class="team-list-item-subtitle paragraph">Marketing</p>
                 <ul class="team-list-card_social-list icon-list list">
                   <li class="team-list-card_social-list-item">
@@ -387,8 +506,8 @@
                 alt="Daniel Wilson"
                 width="264"
               />
-              <div class="team-list-card-title card-title">
-                <h3 class="team-list-item-title small-title">Daniel Wilson</h3>
+              <div class="team-list-card-title card-title-wrapper">
+                <h3 class="team-list-item-title card-title">Daniel Wilson</h3>
                 <p class="team-list-item-subtitle paragraph">UI Designer</p>
                 <ul class="team-list-card_social-list icon-list list">
                   <li class="team-list-card_social-list-item">
@@ -529,14 +648,13 @@
           </ul>
         </div>
       </section>
-
       <!-- =============== /CUSTOMERS =============== -->
     </main>
     <!-- =============== /MAIN =============== -->
 
     <!-- =============== FOOTER =============== -->
     <footer class="footer">
-      <div class="container display-flex">
+      <div class="container footer-container">
         <div class="footer-about-container">
           <a class="logo-light logo link" href="./index.html">
             <span class="part-logo-web">Web</span>Studio
@@ -630,8 +748,12 @@
     <!-- =============== MODAL WINDOW =============== -->
     <div class="modal-backdrop is-hidden" data-modal>
       <div class="modal-window">
-        <button type="button" class="modal-close-button" data-modal-close>
-          <svg class="modal-close-button-icon" width="8px" height="8px">
+        <button
+          type="button"
+          class="close-button modal-close-button"
+          data-modal-close
+        >
+          <svg class="close-button-icon" width="8px" height="8px">
             <use href="./images/sprite.svg#close-button"></use>
           </svg>
         </button>
@@ -718,9 +840,9 @@
         </form>
       </div>
     </div>
-
     <!-- =============== /MODAL WINDOW =============== -->
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
