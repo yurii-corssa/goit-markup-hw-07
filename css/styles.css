@@ -476,7 +476,7 @@ button {
   color: var(--dark-color);
 }
 
-.mobile-menu-font:focus {
+.mobile-menu-font:active {
   color: var(--pressed-state-color);
 }
 
@@ -505,6 +505,10 @@ button {
   margin-bottom: 48px;
 }
 
+.mobile-menu-tel {
+  color: var(--primary-brand-color);
+}
+
 .mobile-menu-social-list {
   justify-content: flex-start;
   gap: 56px;
@@ -520,6 +524,10 @@ button {
   width: 24px;
   height: 24px;
   fill: var(--light-text-color);
+}
+
+.mobile-menu-link.current {
+  color: var(--pressed-state-color);
 }
 
 /* -----/ HEADER
@@ -967,7 +975,13 @@ button {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    column-gap: 24px;
+  }
+
+  @media (max-width: 1199px) {
+    .footer-container {
+      column-gap: 24px;
+      padding-left: 108px;
+    }
   }
 }
 
@@ -1160,21 +1174,26 @@ button {
 }
 
 .portfolio-btn-list {
-  justify-content: center;
-  margin-bottom: 72px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-bottom: 48px;
 }
 
-.portfolio-btn-list-item:not(:last-child) {
-  margin-right: 24px;
+@media screen and (min-width: 768px) {
+  .portfolio-btn-list {
+    justify-content: center;
+    margin-bottom: 72px;
+  }
 }
 
 .portfolio-btn-item {
+  display: flex;
+  padding: 8px 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
   letter-spacing: 0.04em;
-  padding: 12px 24px;
   color: var(--primary-brand-color);
   background-color: var(--light-color);
   border: 1px solid var(--accent-color);
@@ -1183,6 +1202,12 @@ button {
     border var(--animation-dur-timing),
     background-color var(--animation-dur-timing),
     box-shadow var(--animation-dur-timing);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-btn-item {
+    padding: 12px 24px;
+  }
 }
 
 .portfolio-btn-item:hover,
@@ -1199,8 +1224,26 @@ button {
   row-gap: 48px;
 }
 
-.portfolio-element-list-item {
-  width: calc((100% - 48px) / 3);
+.portfolio-element-list {
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-element-list {
+    row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-element-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-element-list-item {
+    width: calc((100% - 48px) / 3);
+  }
 }
 
 .portfolio-element-list-link {

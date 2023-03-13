@@ -40,7 +40,7 @@
               </li>
             </ul>
           </nav>
-          <button type="button" class="hamburger-button">
+          <button type="button" class="hamburger-button js-open-menu">
             <svg class="hamburger-icon" width="32px" height="22px">
               <use href="./images/sprite.svg#menu-hamburger"></use>
             </svg>
@@ -59,6 +59,118 @@
               </li>
             </ul>
           </address>
+          <div class="mobile-menu-backdrop js-menu-container"></div>
+          <div class="mobile-menu">
+            <button
+              type="button"
+              class="close-button menu-close-button js-close-menu"
+            >
+              <svg class="close-button-icon" width="8px" height="8px">
+                <use href="./images/sprite.svg#close-button"></use>
+              </svg>
+            </button>
+            <nav class="display-flex mobile-header-nav-menu">
+              <ul class="mobile-header-nav-menu-list">
+                <li class="list mobile-menu-item">
+                  <a
+                    class="link mobile-menu-link mobile-menu-font"
+                    href="./index.html"
+                    >Studio</a
+                  >
+                </li>
+                <li class="list mobile-menu-item">
+                  <a
+                    class="link mobile-menu-link mobile-menu-font current"
+                    href="./portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="list mobile-menu-item">
+                  <a class="link mobile-menu-link mobile-menu-font" href=""
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <address class="mobile-menu-address">
+              <ul class="display-flex mobile-menu-address-list">
+                <li class="list mobile-menu-item">
+                  <a
+                    class="link mobile-menu-address-link mobile-menu-font mobile-menu-tel"
+                    href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="list mobile-menu-address-item">
+                  <a
+                    class="link mobile-menu-address-link mobile-menu-font mobile-menu-email"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="list mobile-menu-address-item">
+                  <ul class="mobile-menu-social-list icon-list list">
+                    <li class="mobile-menu-social-list-item">
+                      <a
+                        href=""
+                        class="mobile-menu-social-list-link icon-background"
+                      >
+                        <svg class="mobile-menu-social-list-icon">
+                          <use
+                            href="./images/sprite.svg#icon-instagram"
+                            width="24px"
+                            height="24px"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="mobile-menu-social-list-item">
+                      <a
+                        href=""
+                        class="mobile-menu-social-list-link icon-background"
+                      >
+                        <svg class="mobile-menu-social-list-icon">
+                          <use
+                            href="./images/sprite.svg#icon-twitter"
+                            width="24px"
+                            height="24px"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="mobile-menu-social-list-item">
+                      <a
+                        href=""
+                        class="mobile-menu-social-list-link icon-background"
+                      >
+                        <svg class="mobile-menu-social-list-icon">
+                          <use
+                            href="./images/sprite.svg#icon-facebook"
+                            width="24px"
+                            height="24px"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="mobile-menu-social-list-item">
+                      <a
+                        href=""
+                        class="mobile-menu-social-list-link icon-background"
+                      >
+                        <svg class="mobile-menu-social-list-icon">
+                          <use
+                            href="./images/sprite.svg#icon-linkedin"
+                            width="24px"
+                            height="24px"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </address>
+          </div>
         </div>
       </div>
     </header>
@@ -96,12 +208,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/banking-app-interface-concept.jpg"
-                    alt="Banking App Interface Concept"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/banking-app-interface-concept-desktop.webp    1x,
+                        ./images/portfolio/banking-app-interface-concept-desktop@2x.webp 2x,
+                        ./images/portfolio/banking-app-interface-concept-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/banking-app-interface-concept-desktop.jpg    1x,
+                        ./images/portfolio/banking-app-interface-concept-desktop@2x.jpg 2x,
+                        ./images/portfolio/banking-app-interface-concept-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/banking-app-interface-concept-tablet.webp    1x,
+                        ./images/portfolio/banking-app-interface-concept-tablet@2x.webp 2x,
+                        ./images/portfolio/banking-app-interface-concept-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/banking-app-interface-concept-tablet.jpg    1x,
+                        ./images/portfolio/banking-app-interface-concept-tablet@2x.jpg 2x,
+                        ./images/portfolio/banking-app-interface-concept-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/banking-app-interface-concept-mobile.webp    1x,
+                        ./images/portfolio/banking-app-interface-concept-mobile@2x.webp 2x,
+                        ./images/portfolio/banking-app-interface-concept-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/banking-app-interface-concept-mobile.jpg    1x,
+                        ./images/portfolio/banking-app-interface-concept-mobile@2x.jpg 2x,
+                        ./images/portfolio/banking-app-interface-concept-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/banking-app-interface-concept-desktop.jpg"
+                      alt="Banking App Interface Concept"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -119,12 +284,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/cashless-payment.jpg"
-                    alt="phone scans the QR code"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/cashless-payment-desktop.webp    1x,
+                        ./images/portfolio/cashless-payment-desktop@2x.webp 2x,
+                        ./images/portfolio/cashless-payment-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/cashless-payment-desktop.jpg    1x,
+                        ./images/portfolio/cashless-payment-desktop@2x.jpg 2x,
+                        ./images/portfolio/cashless-payment-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/cashless-payment-tablet.webp    1x,
+                        ./images/portfolio/cashless-payment-tablet@2x.webp 2x,
+                        ./images/portfolio/cashless-payment-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/cashless-payment-tablet.jpg     1x,
+                        ./images/portfolio/cashless-payment-tablet@2x.jpg  2x,
+                        ../images/portfolio/cashless-payment-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/cashless-payment-mobile.webp    1x,
+                        ./images/portfolio/cashless-payment-mobile@2x.webp 2x,
+                        ./images/portfolio/cashless-payment-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/cashless-payment-mobile.jpg    1x,
+                        ./images/portfolio/cashless-payment-mobile@2x.jpg 2x,
+                        ./images/portfolio/cashless-payment-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/cashless-payment-desktop.jpg"
+                      alt="phone scans the QR code"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -142,12 +360,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/meditaion-app.jpg "
-                    alt="laptop with phone"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/meditaion-app-desktop.webp    1x,
+                        ./images/portfolio/meditaion-app-desktop@2x.webp 2x,
+                        ./images/portfolio/meditaion-app-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/meditaion-app-desktop.jpg    1x,
+                        ./images/portfolio/meditaion-app-desktop@2x.jpg 2x,
+                        ./images/portfolio/meditaion-app-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/meditaion-app-tablet.webp    1x,
+                        ./images/portfolio/meditaion-app-tablet@2x.webp 2x,
+                        ./images/portfolio/meditaion-app-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/meditaion-app-tablet.jpg    1x,
+                        ./images/portfolio/meditaion-app-tablet@2x.jpg 2x,
+                        ./images/portfolio/meditaion-app-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/meditaion-app-mobile.webp    1x,
+                        ./images/portfolio/meditaion-app-mobile@2x.webp 2x,
+                        ./images/portfolio/meditaion-app-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/meditaion-app-mobile.jpg    1x,
+                        ./images/portfolio/meditaion-app-mobile@2x.jpg 2x,
+                        ./images/portfolio/meditaion-app-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/meditaion-app-desktop.jpg "
+                      alt="laptop with phone"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -165,12 +436,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/taxi-service.jpg"
-                    alt="hands on the steering wheel of the car"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/taxi-service-desktop.webp    1x,
+                        ./images/portfolio/taxi-service-desktop@2x.webp 2x,
+                        ./images/portfolio/taxi-service-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/taxi-service-desktop.jpg    1x,
+                        ./images/portfolio/taxi-service-desktop@2x.jpg 2x,
+                        ./images/portfolio/taxi-service-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/taxi-service-tablet.webp    1x,
+                        ./images/portfolio/taxi-service-tablet@2x.webp 2x,
+                        ./images/portfolio/taxi-service-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/taxi-service-tablet.jpg    1x,
+                        ./images/portfolio/taxi-service-tablet@2x.jpg 2x,
+                        ./images/portfolio/taxi-service-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/taxi-service-mobile.webp    1x,
+                        ./images/portfolio/taxi-service-mobile@2x.webp 2x,
+                        ./images/portfolio/taxi-service-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/taxi-service-mobile.jpg    1x,
+                        ./images/portfolio/taxi-service-mobile@2x.jpg 2x,
+                        ./images/portfolio/taxi-service-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/taxi-service-desktop.jpg"
+                      alt="hands on the steering wheel of the car"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -188,12 +512,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/screen-illustrations.jpg"
-                    alt="screen illustrations with phone"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/screen-illustrations-desktop.webp    1x,
+                        ./images/portfolio/screen-illustrations-desktop@2x.webp 2x,
+                        ./images/portfolio/screen-illustrations-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/screen-illustrations-desktop.jpg    1x,
+                        ./images/portfolio/screen-illustrations-desktop@2x.jpg 2x,
+                        ./images/portfolio/screen-illustrations-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/screen-illustrations-tablet.webp    1x,
+                        ./images/portfolio/screen-illustrations-tablet@2x.webp 2x,
+                        ./images/portfolio/screen-illustrations-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/screen-illustrations-tablet.jpg    1x,
+                        ./images/portfolio/screen-illustrations-tablet@2x.jpg 2x,
+                        ./images/portfolio/screen-illustrations-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/screen-illustrations-mobile.webp    1x,
+                        ./images/portfolio/screen-illustrations-mobile@2x.webp 2x,
+                        ./images/portfolio/screen-illustrations-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/screen-illustrations-mobile.jpg    1x,
+                        ./images/portfolio/screen-illustrations-mobile@2x.jpg 2x,
+                        ./images/portfolio/screen-illustrations-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/screen-illustrations-desktop.jpg"
+                      alt="screen illustrations with phone"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -211,12 +588,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/online-courses.jpg"
-                    alt="a joyful girl with headphones holds a phone in her hand"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/online-courses-desktop.webp    1x,
+                        ./images/portfolio/online-courses-desktop@2x.webp 2x,
+                        ./images/portfolio/online-courses-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/online-courses-desktop.jpg    1x,
+                        ./images/portfolio/online-courses-desktop@2x.jpg 2x,
+                        ./images/portfolio/online-courses-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/online-courses-tablet.webp    1x,
+                        ./images/portfolio/online-courses-tablet@2x.webp 2x,
+                        ./images/portfolio/online-courses-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/online-courses-tablet.jpg    1x,
+                        ./images/portfolio/online-courses-tablet@2x.jpg 2x,
+                        ./images/portfolio/online-courses-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/online-courses-mobile.webp    1x,
+                        ./images/portfolio/online-courses-mobile@2x.webp 2x,
+                        ./images/portfolio/online-courses-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/online-courses-mobile.jpg    1x,
+                        ./images/portfolio/online-courses-mobile@2x.jpg 2x,
+                        ./images/portfolio/online-courses-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/online-courses-desktop.jpg"
+                      alt="a joyful girl with headphones holds a phone in her hand"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -234,12 +664,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/instagram-stories-concept.jpg"
-                    alt="Instagram Stories Concepts"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/instagram-stories-concept-desktop.webp    1x,
+                        ./images/portfolio/instagram-stories-concept-desktop@2x.webp 2x,
+                        ./images/portfolio/instagram-stories-concept-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/instagram-stories-concept-desktop.jpg    1x,
+                        ./images/portfolio/instagram-stories-concept-desktop@2x.jpg 2x,
+                        ./images/portfolio/instagram-stories-concept-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/instagram-stories-concept-tablet.webp    1x,
+                        ./images/portfolio/instagram-stories-concept-tablet@2x.webp 2x,
+                        ./images/portfolio/instagram-stories-concept-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/instagram-stories-concept-tablet.jpg    1x,
+                        ./images/portfolio/instagram-stories-concept-tablet@2x.jpg 2x,
+                        ./images/portfolio/instagram-stories-concept-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/instagram-stories-concept-mobile.webp    1x,
+                        ./images/portfolio/instagram-stories-concept-mobile@2x.webp 2x,
+                        ./images/portfolio/instagram-stories-concept-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/instagram-stories-concept-mobile.jpg    1x,
+                        ./images/portfolio/instagram-stories-concept-mobile@2x.jpg 2x,
+                        ./images/portfolio/instagram-stories-concept-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/instagram-stories-concept-desktop.jpg"
+                      alt="Instagram Stories Concepts"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -257,12 +740,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/organic-food.jpg"
-                    alt="a girl holds a bag of groceries"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/organic-food-desktop.webp    1x,
+                        ./images/portfolio/organic-food-desktop@2x.webp 2x,
+                        ./images/portfolio/organic-food-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/organic-food-desktop.jpg    1x,
+                        ./images/portfolio/organic-food-desktop@2x.jpg 2x,
+                        ./images/portfolio/organic-food-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/organic-food-tablet.webp    1x,
+                        ./images/portfolio/organic-food-tablet@2x.webp 2x,
+                        ./images/portfolio/organic-food-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/organic-food-tablet.jpg    1x,
+                        ./images/portfolio/organic-food-tablet@2x.jpg 2x,
+                        ./images/portfolio/organic-food-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/organic-food-mobile.webp    1x,
+                        ./images/portfolio/organic-food-mobile@2x.webp 2x,
+                        ./images/portfolio/organic-food-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/organic-food-mobile.jpg    1x,
+                        ./images/portfolio/organic-food-mobile@2x.jpg 2x,
+                        ./images/portfolio/organic-food-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/organic-food-desktop.jpg"
+                      alt="a girl holds a bag of groceries"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -280,12 +816,65 @@
             <li class="portfolio-element-list-item list">
               <a class="link portfolio-element-list-link" href="">
                 <div class="portfolio-element-list-wrapper">
-                  <img
-                    class="portfolio-element-list-img"
-                    src="./images/portfolio/fresh-coffee.jpg"
-                    alt="pours milk into coffee"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/fresh-coffee-desktop.webp    1x,
+                        ./images/portfolio/fresh-coffee-desktop@2x.webp 2x,
+                        ./images/portfolio/fresh-coffee-desktop@3x.webp 3x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/fresh-coffee-desktop.jpg    1x,
+                        ./images/portfolio/fresh-coffee-desktop@2x.jpg 2x,
+                        ./images/portfolio/fresh-coffee-desktop@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/fresh-coffee-tablet.webp    1x,
+                        ./images/portfolio/fresh-coffee-tablet@2x.webp 2x,
+                        ./images/portfolio/fresh-coffee-tablet@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/fresh-coffee-tablet.jpg    1x,
+                        ./images/portfolio/fresh-coffee-tablet@2x.jpg 2x,
+                        ./images/portfolio/fresh-coffee-tablet@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/fresh-coffee-mobile.webp    1x,
+                        ./images/portfolio/fresh-coffee-mobile@2x.webp 2x,
+                        ./images/portfolio/fresh-coffee-mobile@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/fresh-coffee-mobile.jpg    1x,
+                        ./images/portfolio/fresh-coffee-mobile@2x.jpg 2x,
+                        ./images/portfolio/fresh-coffee-mobile@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      class="portfolio-element-list-img"
+                      src="./images/portfolio/fresh-coffee-desktop.jpg"
+                      alt="pours milk into coffee"
+                      width="360"
+                    />
+                  </picture>
                   <p class="portfolio-element-list-overlay paragraph">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -399,5 +988,7 @@
       </div>
     </footer>
     <!-- =============== /FOOTER =============== -->
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
