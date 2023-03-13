@@ -15,7 +15,7 @@
   --animation-dur-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* =============== GLOBALS =============== */
+/* -----> GLOBALS */
 
 h1,
 h2,
@@ -85,9 +85,13 @@ button {
   text-decoration: none;
 }
 
-/* =============== GLOBALS =============== */
+/* -----/ GLOBALS 
 
-/* =============== COMPONENTS =============== */
+
+*/
+
+/* -----> COMPONENTS */
+
 .logo {
   font-weight: 800;
   font-size: 18px;
@@ -275,9 +279,13 @@ button {
   border: 1.25px solid var(--pressed-state-color);
 }
 
-/* =============== /COMPONENTS =============== */
+/* -----/ COMPONENTS 
 
-/* =============== HEADER =============== */
+
+*/
+
+/* -----> HEADER */
+
 .header {
   padding-top: 24px;
   min-height: 73px;
@@ -309,6 +317,10 @@ button {
 
 .hamburger-icon {
   stroke: var(--dark-color);
+}
+
+.hamburger-button:focus .hamburger-icon {
+  stroke: var(--pressed-state-color);
 }
 
 .header-nav-menu-list {
@@ -510,9 +522,12 @@ button {
   fill: var(--light-text-color);
 }
 
-/* =============== /HEADER =============== */
+/* -----/ HEADER
 
-/* =============== HERO =============== */
+
+*/
+
+/* -----> HERO */
 
 .hero-container {
   display: flex;
@@ -521,30 +536,192 @@ button {
 }
 
 .hero {
-  padding-top: 112px;
-  padding-bottom: 112px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/background-hero-people-office.jpg);
+    url(../images/main-page/hero/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 1440px;
+  background-size: 428px 432px;
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/hero/hero-bg-mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/hero/hero-bg-mobile@3x.jpg);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/hero/hero-bg-tablet.jpg);
+    background-size: 768px;
     padding-bottom: 108px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-page/hero/hero-bg-tablet@2x.jpg);
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-page/hero/hero-bg-tablet@3x.jpg);
+    }
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/hero/hero-bg-desktop.jpg);
+    background-size: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
   }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-page/hero/hero-bg-desktop@2x.jpg);
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-page/hero/hero-bg-desktop@3x.jpg);
+    }
+  }
 }
+
+/* .hero {
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/main-page/hero/hero-bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/hero/hero-bg-mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 428px) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/hero/hero-bg-tablet.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-page/hero/hero-bg-tablet@2x.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/hero/hero-bg-desktop.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-page/hero/hero-bg-desktop@2x.jpg);
+      padding-bottom: 108px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-size: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+} */
 
 .hero-main-title {
   max-width: 320px;
@@ -595,9 +772,14 @@ button {
 .modal-button:active {
   background-color: var(--pressed-state-color);
 }
-/* =============== /HERO =============== */
 
-/* =============== OUR QUALITIES =============== */
+/* -----/ HERO 
+
+
+*/
+
+/* -----> OUR QUALITIES */
+
 .our-qua-list-icon-container {
   display: none;
 }
@@ -641,9 +823,13 @@ button {
   }
 }
 
-/* =============== /OUR QUALITIES =============== */
+/* -----/ OUR QUALITIES 
 
-/* =============== WHAT ARE WE DOING =============== */
+
+*/
+
+/* -----> WHAT ARE WE DOING */
+
 .we-doing-section {
   display: none;
 }
@@ -662,9 +848,13 @@ button {
 .we-doing-list-item {
   width: calc((100% - 48px) / 3);
 }
-/* =============== /WHAT ARE WE DOING =============== */
+/* -----/ WHAT ARE WE DOING 
 
-/* =============== OUR TEAM =============== */
+
+*/
+
+/* -----> OUR TEAM */
+
 .team {
   background-color: var(--light-color);
   padding-bottom: 128px;
@@ -718,9 +908,12 @@ button {
   fill: var(--light-text-color);
 }
 
-/* =============== /OUR TEAM =============== */
+/* -----/ OUR TEAM 
 
-/* =============== CUSTOMERS =============== */
+
+*/
+
+/* -----> CUSTOMERS */
 
 .customers-title {
   margin-bottom: 72px;
@@ -751,9 +944,13 @@ button {
   fill: currentColor;
 }
 
-/* =============== /CUSTOMERS =============== */
+/* -----/ CUSTOMERS 
 
-/* =============== FOOTER =============== */
+
+*/
+
+/* -----> FOOTER */
+
 .footer {
   background-color: var(--dark-color);
   padding: 100px 0;
@@ -951,9 +1148,12 @@ button {
   fill: var(--light-text-color);
 }
 
-/* =============== /FOOTER =============== */
+/* -----/ FOOTER 
 
-/* =============== PORTFOLIO =============== */
+
+*/
+
+/* -----> PORTFOLIO */
 
 .portfolio {
   padding-top: 96px;
@@ -1048,9 +1248,13 @@ button {
   color: var(--dark-color);
 }
 
-/* =============== /PORTFOLIO =============== */
+/* -----/ PORTFOLIO 
 
-/* =============== MODAL WINDOW =============== */
+
+*/
+
+/* -----> MODAL WINDOW */
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -1193,4 +1397,7 @@ button {
   align-self: center;
 }
 
-/* =============== /MODAL WINDOW =============== */
+/* -----/ MODAL WINDOW 
+
+
+*/
